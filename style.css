@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 900 px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px
+    rgba(0, 0, 0, 0.1);
+
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+.cash-input {
+    margin-top: 20px;
+}
+
+.final-info {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #444;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #voucher, #voucher * {
+        visibility: visible;
+    }
+
+    #voucher {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@media print {
+    #cashSection {
+        display: none;
+    }
+}
