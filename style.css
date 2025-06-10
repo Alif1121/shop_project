@@ -5,14 +5,12 @@ body {
 }
 
 .container {
-    max-width: 900 px;
+    max-width: 900px;
     margin: auto;
     background: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px
-    rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3 {
@@ -26,8 +24,9 @@ form {
 
 .product-row {
     display: flex;
-    gap: 20px;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
     font-weight: bold;
     color: #333;
 }
@@ -38,6 +37,9 @@ input[type="number"] {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -50,6 +52,8 @@ button {
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
@@ -57,9 +61,10 @@ button:hover {
 }
 
 table {
-    width: 100px;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    word-break: break-word;
 }
 
 table, th, td {
@@ -69,6 +74,7 @@ table, th, td {
 th, td {
     padding: 10px;
     text-align: center;
+    font-size: 14px;
 }
 
 tfoot td {
@@ -85,6 +91,28 @@ tfoot td {
     color: #444;
 }
 
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    .product-row {
+        flex-direction: column;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Print styles */
 @media print {
     body * {
         visibility: hidden;
@@ -100,9 +128,7 @@ tfoot td {
         top: 0;
         width: 100%;
     }
-}
 
-@media print {
     #cashSection {
         display: none;
     }
